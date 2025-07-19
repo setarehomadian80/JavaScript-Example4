@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .todo {
+            width: 500px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 100px auto;
+
+            * {
+                width: 100%;
+            }
+
+            >input {
+                height: 40px;
+            }
+
+            >button {
+                margin-block: 10px;
+                height: 40px;
+            }
+
+            >ul {
+                >li {
+                    width: 100%;
+                    height: 60px;
+                    list-style-type: none;
+                    margin: 10px 0;
+                    background-color: rgb(206, 203, 203);
+                    color: black;
+                    display: flex;
+
+                    * {
+                        display: block;
+                    }
+
+                    >h3 {
+                        width: 400px;
+                        display: flex;
+                        align-items: center;
+                        text-transform: capitalize;
+                        padding-left: 10px;
+                    }
+
+                    >span {
+                        width: 50px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo">
+        <input type="text" autofocus placeholder="write your plan......">
+        <button>add</button>
+        <ul id="list">
+        </ul>
+    </div>
+</body>
+<script src="main.js/main.js"></script>
+
+</html>
