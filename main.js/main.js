@@ -16,9 +16,10 @@ btn.addEventListener("click", () => {
 function myAdd(temp){
    let li = document.createElement("li");
     li.innerHTML = `
+    <input class="hide" type="text" />
          <h3>${temp}</h3>
                 <span><input type="checkbox" onchange='fnDel(this)'></span>
-                <span>✏️</span>
+                <span onclick=myEdit(this)>✏️</span>
                 <span onclick=mydel(this)>🗑️</span>
         `;
     list.appendChild(li);
@@ -60,4 +61,16 @@ function addAgain(s){
  let temp =  s.previousElementSibling.innerText
  s.parentElement.remove()
 myAdd(temp)
+}
+
+let num =1
+function myEdit (s){
+if(num%2){
+   s.parentElement.children[0].classList.remove('hide')
+   s.innerHTML='✅'
+}else{
+ s.parentElement.children[0].classList.add('hide')
+   s.innerHTML='✏️'
+}
+num++
 }
