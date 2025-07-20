@@ -40,6 +40,7 @@
                     background-color: rgb(206, 203, 203);
                     color: black;
                     display: flex;
+                    transition: 1s;
 
                     * {
                         display: block;
@@ -66,16 +67,31 @@
             }
 
         }
+        .left{
+            transform: translateX(-1500px);
+        }
+        #garbage{
+            width: 300px;
+            position: fixed;
+            top: 0;left: 0;
+            border: 2px solid blue;
+            color: black;
+            >li{
+                color: rgb(0, 0, 0);
+                background-color: gray;
+                border: 1px solid black;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="todo">
-        <input type="text" autofocus placeholder="write your plan......">
+        <input type="text"  autofocus placeholder="write your plan......">
         <button>add</button>
-        <ul id="list">
-        </ul>
+        <ul id="list"></ul>
     </div>
+    <ul id="garbage"></ul>
 </body>
 <script src="main.js/main.js"></script>
 
