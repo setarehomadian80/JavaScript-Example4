@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body{
+            position: relative;
+        } */
+
+        .todo {
+            border: 2px solid black;
+            background-color: darkslategray;
+            width: 600px;
+            margin: 100px auto;
+            padding: 10px 20px;
+            overflow: hidden;
+
+            >div {
+                width: 100%;
+                display: flex;
+                height: 70px;
+                justify-content: space-around;
+
+                >input {
+                    border: 1px solid yellow;
+                    width: 80%;
+                    height: 40px;
+                }
+
+                >button {
+                    width: 10%;
+                    height: 40px;
+                    cursor: pointer;
+                }
+
+            }
+
+            >ul {
+                width: 100%;
+
+                >li {
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    color: black;
+                    height: 40px;
+                    padding: 5px;
+                    gap: 45px;
+                    overflow: hidden;
+                    background-color: rgb(240, 230, 230);
+                    margin: 10px 0;
+
+                    >h3 {
+                        width: 300px;
+                        font-size: 20px;
+                    }
+
+                    >span {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .left {
+            transform: translateX(-1500px) !important;
+            transition: 1s ease-in-out;
+        }
+
+        #garbage {
+            width: 300px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: blue;
+        }
+
+        .hide {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo">
+        <div>
+            <input type="text" placeholder="what are you tasks for today?">
+            <button>Add</button>
+        </div>
+        <ul class="list"></ul>
+    </div>
+    <ul id="garbage"></ul>
+</body>
+<script src="main.js/list.js"></script>
+
+</html>

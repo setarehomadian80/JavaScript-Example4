@@ -5,6 +5,7 @@ const deleteList = document.getElementById('garbage')
 
 btn.addEventListener("click", () => {
   let temp = inp.value;
+
   if (temp === "") {
     alert("write your plan");
   } else {
@@ -39,7 +40,7 @@ function fnDel(s) {
 }
 
 function mydel(s){
-  if(confirm('are tou sure?')){
+  if(confirm('are you sure?')){
    let oldText = s.parentElement.children[1].innerText
     s.parentElement.classList.add('left')
     setTimeout(() => {
