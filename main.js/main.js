@@ -68,9 +68,11 @@ let num =1
 function myEdit (s){
 if(num%2){
    s.parentElement.children[0].classList.remove('hide')
+   s.parentElement.children[0].value=s.parentElement.children[1].innerText
    s.innerHTML='✅'
 }else{
  s.parentElement.children[0].classList.add('hide')
+ s.parentElement.children[1].innerText= s.parentElement.children[0].value
    s.innerHTML='✏️'
 }
 num++
